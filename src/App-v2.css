@@ -317,3 +317,100 @@ footer {
     padding: 10px;
   }
 }
+
+.form-group input[type="checkbox"] {
+  width: auto;
+  min-height: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.form-group a {
+  color: #3498db;
+  text-decoration: underline;
+  margin: 0 5px;
+}
+
+.form-group a:hover {
+  color: #2980b9;
+}
+
+/* Анимация для кнопки регистрации */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+.btn-primary:focus:not(:active)::after {
+  animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+/* Стили для формы в модальном окне */
+.modal-form .form-group {
+  margin-bottom: 20px;
+}
+
+.modal-form input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: #F4E8D1;
+  font-size: 16px;
+  min-height: 44px;
+  transition: border-color 0.3s;
+}
+
+.modal-form input:focus {
+  outline: none;
+  border-color: #E6CB99;
+  background: #FFF2DA;
+}
+
+/* Адаптивные стили для чекбоксов */
+@media (max-width: 480px) {
+  .form-group label {
+    font-size: 12px;
+    align-items: flex-start;
+  }
+  
+  .form-group input[type="checkbox"] {
+    margin-top: 3px;
+  }
+}

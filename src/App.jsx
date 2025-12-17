@@ -1,13 +1,14 @@
+
 import React from 'react';
 import './App.css';
 import HeaderMain from './components/HeaderMain';
-import Header from './components/Header';
-import About from './components/About';
-import Courses from './components/Courses';
-import Goal from './components/Goal';
-import CourseDetail from './components/CourseDetail'; // Добавьте эту строку
-import Teachers from './components/Teachers';
-import Footer from './components/Footer';
+import RegistrationForm from './components/RegistrationForm';
+import AboutSection from './components/AboutSection';
+import CoursesSection from './components/CoursesSection';
+import GoalSection from './components/GoalSection';
+import CourseDetail from './components/CourseDetail';
+import TeachersSection from './components/TeachersSection';
+import FooterSection from './components/FooterSection';
 
 function App() {
   return (
@@ -15,13 +16,13 @@ function App() {
       <HeaderMain />
       <div className="content-wrapper">
         <div className="container">
-          <Header />
-          <About />
-          <Courses />
-          <Goal />
-          <CourseDetail /> 
-          <Teachers />
-          <Footer />
+          <RegistrationForm />
+          <AboutSection />
+          <CoursesSection />
+          <GoalSection />
+          <CourseDetail />
+          <TeachersSection />
+          <FooterSection />
         </div>
       </div>
     </div>
